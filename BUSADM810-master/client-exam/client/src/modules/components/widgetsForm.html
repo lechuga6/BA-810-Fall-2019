@@ -1,0 +1,14 @@
+<template>
+    <form>
+        <div class="form-group">
+            <label for="widgetInput">Boo</label>
+            <input value.bind="widget.selectedWidget.Boo" type="text" class="form-control" placeholder="Boo title">
+        </div>
+        <div class="form-group">
+            <label for="widgetStatus">Hoo</label>
+            <flat-picker controlid="hooDate" value.bind="widget.selectedWidget.Hoo"></flat-picker>
+        </div>
+            <button class="btn btn-primary" click.trigger="saveWidget()">Save</button>
+            <button class="btn btn-primary" click.trigger="Cancel()">Cancel</button>
+    </form>
+</template>

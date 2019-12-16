@@ -1,0 +1,24 @@
+<template>
+        <form>
+                <div class="form-group">
+                  <label for="movieInput">Movie</label>
+                  <input value.bind="movie.selectedMovie.title" type="text" class="form-control" id="movieInput"
+                    placeholder="Movie title">
+                </div>
+                <div class="form-group">
+                  <label for="movieSynopsis">Movie Synopsis</label>
+                  <textarea value.bind="movie.selectedMovie.synopsis" class="form-control" id="movieSynopsis" rows="5"></textarea>
+                </div>
+                <div class="form-group">
+                  <label for="movieRelease">Release Date</label>
+                  <flat-picker controlid="movieRelease" value.bind="movie.selectedMovie.dateReleased"></flat-picker>
+                </div>
+                <div class="form-group">
+                  <label for="movieCopy">Number of Copies</label>
+                  <input value.bind="movie.selectedMovie.numberOfCopies" type="text" class="form-control" id="movieCopy"
+                    placeholder="Number of Copies">
+                </div>
+                <button class="btn btn-primary" click.trigger="saveMovie()">Save</button>
+                <button class="btn btn-primary" click.trigger="cancel()">Cancel</button>
+              </form>
+    </template>

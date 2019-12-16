@@ -1,0 +1,26 @@
+<template>
+    <button class="btn btn-primary" click.trigger="newWidget()" style="margin-bottom:10px;">Create Gadget</button>
+    <table class="table">
+        <thead>
+            <tr>
+                 <th scope="col">Boo</th>
+                <th scope="col">Hoo</th>
+                        <th></th>
+                      
+            </tr>
+        </thead>
+        <tbody>
+            <tr repeat.for="widget of widget.widgetsArray | filterWidgets:isCheckedCompleted">
+                    <td scope="row" click.delegate="editWidget(widget)">${widget.Yoo}</td>
+                <td><select change.delegate="updateWidget(widget)" value.bind="widget.Hoo" class="form-control"
+                        id="widgetHoo">
+                        <option repeat.for="Hoo of Hoos" value.bind="Hoo">${Hoo}</option>
+                    </select></td>
+                <td>${widget.Hoo | dateFormat}</td>
+                <td>
+                    <button click.trigger="deleteWidget(widget)" type="button" class="btn btn-danger btn-sm">Delete</button>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+</template>

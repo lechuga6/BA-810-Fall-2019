@@ -1,0 +1,53 @@
+<!-- <template>
+        First Name: <input value.bind="user.firstName">
+        Last Name: <input value.bind="user.lastName">
+    Active: <input value.bind="user.active">
+    Role: <input value.bind="user.role"> 
+        Email: <input value.bind="user.email">
+        Password: <input value.bind="user.password">
+        <button click.trigger="save()">Save</button>
+</template> -->
+
+<template>
+  <html>
+
+  <head>
+    <style>
+      table {
+        font-family: arial, sans-serif;
+        border-collapse: collapse;
+        width: 100%;
+      }
+
+      td,
+      th {
+        border: 1px solid #dddddd;
+        text-align: left;
+        padding: 8px;
+      }
+
+      tr:nth-child(even) {
+        background-color: #dddddd;
+      }
+    </style>
+  </head>
+
+  <body>
+
+
+
+    <table>
+
+      <tr>
+        <td>First Name: <input value.bind="user.firstName"></td>
+            <td>Last Name: <input value.bind="user.lastName"></td>
+        <td>Active: <input value.bind="user.active"></td>
+        <td>Role: <input value.bind="user.role"></td>
+            <td>Email: <input value.bind="user.email"></td>
+            <td>Password: <input value.bind="user.password"></td>
+    </table>
+    <button click.trigger="save()">Save</button>
+  </body>
+
+  </html>
+</template>

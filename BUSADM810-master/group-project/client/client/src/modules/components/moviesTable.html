@@ -1,0 +1,25 @@
+<template>
+    <button class="btn btn-primary" click.trigger="newMovie()" style="margin-bottom:10px;">Add Movie</button>
+    <table class="table">
+        <thead>
+            <tr>
+                 <th scope="col">Movie</th>
+                <th scope="col">Date Released</th>
+                <th scope="col">Number of Copies</th>
+                        <th></th>   
+            </tr>
+        </thead>
+        <tbody>
+            <tr repeat.for="movie of movie.moviesArray">
+                <td scope="row" click.delegate="editMovie(movie)">${movie.title}</td>
+                
+                <td>${movie.dateReleased | dateFormat}</td>
+
+                <td>${movie.numberOfCopies}</td>
+                <td>
+                    <button click.trigger="deleteMovie(movie)" type="button" class="btn btn-danger btn-sm">Delete</button>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+</template>
